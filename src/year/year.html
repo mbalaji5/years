@@ -1,0 +1,19 @@
+<h1>Welcome</h1>
+<span>Year On</span>
+<div *ngFor="let item of [0,1,2,3,4,5,6];let i=index">
+  <input
+    [(ngModel)]="outputDataObject.lstPyramidOn[i]"
+    (change)="onChange($event)"
+    [id]="'yearOn'+i"
+  />
+</div>
+<span>Year Off</span>
+<div *ngFor="let item of [0,1,2,3,4,5,6];let i=index">
+  <input
+    [(ngModel)]="outputDataObject.lstPyramidOff[i]"
+    (change)="onChange($event)"
+    [id]="'yearOff'+i"
+  />
+</div>
+
+<button (click)="clickme()">click Me</button>
